@@ -51,7 +51,7 @@ const Login = () => {
         <img src='https://res.cloudinary.com/djfi9rtlx/image/upload/v1716580774/instagram/v1brbru1r7jtiijenkz9.png' />
       </div>
       <div className='mt-10 text-blue-950'>
-        <Link href={'#'}>Create a new account</Link>
+        <Link href={'/signup'}>Create a new account</Link>
       </div>
     </div>
   )
