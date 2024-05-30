@@ -41,7 +41,7 @@ const Login = () => {
         <form className='flex flex-col items-center justify-center w-full' onSubmit={handelSubmit}>
           <input className='border border-gray-300 rounded-sm pl-3 w-3/4 text-xs h-10 mt-2' name='username' type='text' onChange={handleChange} placeholder='Username' />
           <input className='border border-gray-300 rounded-sm pl-3 w-3/4 text-xs h-10 mt-2' name='password' type='text' onChange={handleChange} placeholder='Password' />
-          <button className='border border-gray-300 rounded-md pl-3 w-3/4 text-xs h-10 mt-3 bg-blue-600 hover:to-blue-700 text-white font-bold' type='submit'>Sign Up</button>
+          <button className='border border-gray-300 rounded-md pl-3 w-3/4 text-xs h-10 mt-3 bg-blue-600 hover:to-blue-700 text-white font-bold' type='submit'>Log In</button>
         </form>
       </div>
       <div className='mt-4'>
