@@ -16,7 +16,8 @@ const userSchema = new mongoose.Schema({
         type : String,
         unique : true,
         require : true
-    }
+    },
+    profileUrl : String,
 })
 
 mongoose.models = {};
