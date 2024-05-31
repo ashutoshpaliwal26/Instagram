@@ -1,20 +1,33 @@
-import React from 'react'
+'use client';
+import React, { useState } from 'react'
+import ProfileUpdate from './profileUpdater'
 
 const Profile = () => {
+    const [profileUpdater, setProfileUpdater] = useState('hidden w-full h-screen');
+    function handelProfileUpdate(){
+        if(profileUpdater === 'hidden w-full h-screen'){
+            setProfileUpdater('fixed w-full h-screen');
+        }else{
+            setProfileUpdater('hidden w-full h-screen');
+        }
+    }
   return (
-    <div className='w-full h-screen '>
+    <>
+        <div className={profileUpdater}>
+            <ProfileUpdate/>
+        </div>
         <div className='w-full h-10 bg-white'>
 
         </div>
         <div className='flex items-center justify-between w-full h-fit p-3'>
-            <div className='w-20 h-20 bg-yellow-500 rounded-full'>
+            <div className='w-20 h-20 bg-yellow-500 rounded-full' onClick={handelProfileUpdate}>
                 <img className='w-full h-full rounded-full bg-cover overflow-hidden' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDR8H0rgV-zmSodkT_erGjzA_VhfWE22Pg7Q&s'/>
             </div>
             <div>
-                <button className='bg-gray-200 w-fit h-fit rounded-xl bg-white text-xs font-bold p-2'>Edit Profile</button>
+                <button className='bg-gray-200 w-fit h-fit rounded-xl text-xs font-bold p-2'>Edit Profile</button>
             </div>
             <div>
-                <button className='bg-gray-200 w-fit h-fit rounded-xl bg-white text-xs font-bold p-2'>Archieve</button>
+                <button className='bg-gray-200 w-fit h-fit rounded-xl text-xs font-bold p-2'>Archieve</button>
             </div>
         </div>
         <div className='m-3'>
@@ -49,7 +62,7 @@ const Profile = () => {
                 <img src='https://maharajatravels.in/wp-content/uploads/2023/05/bali.jpg'/>
             </div>
         </div>
-    </div>
+    </>
 
   )
 }
